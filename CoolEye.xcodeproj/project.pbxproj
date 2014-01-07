@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65347746187548A000D131FB /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 65347745187548A000D131FB /* test.png */; };
+		6534774818754D5000D131FB /* white_nike.png in Resources */ = {isa = PBXBuildFile; fileRef = 6534774718754D5000D131FB /* white_nike.png */; };
+		6534774A18754ECB00D131FB /* black_nike.png in Resources */ = {isa = PBXBuildFile; fileRef = 6534774918754ECB00D131FB /* black_nike.png */; };
+		6534774C187553A200D131FB /* white_nike200.png in Resources */ = {isa = PBXBuildFile; fileRef = 6534774B187553A200D131FB /* white_nike200.png */; };
+		653477511875643500D131FB /* demo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 653477501875643500D131FB /* demo.jpg */; };
+		65347754187568F300D131FB /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65347753187568F300D131FB /* DemoViewController.m */; };
+		65D415DD187BCA0F00823DA9 /* jg.png in Resources */ = {isa = PBXBuildFile; fileRef = 65D415DB187BCA0F00823DA9 /* jg.png */; };
+		65D415DE187BCA0F00823DA9 /* sw.png in Resources */ = {isa = PBXBuildFile; fileRef = 65D415DC187BCA0F00823DA9 /* sw.png */; };
 		65DA16621872D10E0039CB78 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65DA16611872D10E0039CB78 /* Foundation.framework */; };
 		65DA16641872D10E0039CB78 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65DA16631872D10E0039CB78 /* CoreGraphics.framework */; };
 		65DA16661872D10E0039CB78 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65DA16651872D10E0039CB78 /* UIKit.framework */; };
@@ -14,13 +22,20 @@
 		65DA166E1872D10E0039CB78 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA166D1872D10E0039CB78 /* main.m */; };
 		65DA16721872D10E0039CB78 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA16711872D10E0039CB78 /* AppDelegate.m */; };
 		65DA16751872D10E0039CB78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65DA16731872D10E0039CB78 /* Main.storyboard */; };
-		65DA16781872D10E0039CB78 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA16771872D10E0039CB78 /* ViewController.m */; };
 		65DA167A1872D10E0039CB78 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65DA16791872D10E0039CB78 /* Images.xcassets */; };
 		65DA16811872D10E0039CB78 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65DA16801872D10E0039CB78 /* XCTest.framework */; };
 		65DA16821872D10E0039CB78 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65DA16611872D10E0039CB78 /* Foundation.framework */; };
 		65DA16831872D10E0039CB78 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65DA16651872D10E0039CB78 /* UIKit.framework */; };
 		65DA168B1872D10E0039CB78 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 65DA16891872D10E0039CB78 /* InfoPlist.strings */; };
 		65DA168D1872D10E0039CB78 /* CoolEyeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA168C1872D10E0039CB78 /* CoolEyeTests.m */; };
+		65DA16971872D1E10039CB78 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65DA16961872D1E10039CB78 /* Accelerate.framework */; };
+		65DA16991872D1F00039CB78 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65DA16981872D1F00039CB78 /* CoreImage.framework */; };
+		65DA169B1872D1F60039CB78 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65DA169A1872D1F60039CB78 /* CoreMedia.framework */; };
+		65DA169D1872D1FF0039CB78 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65DA169C1872D1FF0039CB78 /* QuartzCore.framework */; };
+		65DA169F1872D2240039CB78 /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 65DA169E1872D2240039CB78 /* libstdc++.6.0.9.dylib */; };
+		65DA16A11872D22C0039CB78 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65DA16A01872D22C0039CB78 /* AVFoundation.framework */; };
+		65DA16A31872D2470039CB78 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 65DA16A21872D2470039CB78 /* ViewController.mm */; };
+		C1A4B903CC284B47BF662F29 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 658F03FCD6C7418EB2F0E592 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +49,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		36B9B43F8DB04A0D852FDC04 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		65347745187548A000D131FB /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = test.png; path = ../../../Downloads/test.png; sourceTree = "<group>"; };
+		6534774718754D5000D131FB /* white_nike.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = white_nike.png; path = ../../../Downloads/white_nike.png; sourceTree = "<group>"; };
+		6534774918754ECB00D131FB /* black_nike.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = black_nike.png; path = ../../../Downloads/black_nike.png; sourceTree = "<group>"; };
+		6534774B187553A200D131FB /* white_nike200.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = white_nike200.png; path = ../../../Downloads/white_nike200.png; sourceTree = "<group>"; };
+		653477501875643500D131FB /* demo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = demo.jpg; path = ../../../Downloads/demo.jpg; sourceTree = "<group>"; };
+		65347752187568F300D131FB /* DemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
+		65347753187568F300D131FB /* DemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
+		658F03FCD6C7418EB2F0E592 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		65D415DB187BCA0F00823DA9 /* jg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = jg.png; path = ../../../Desktop/jg.png; sourceTree = "<group>"; };
+		65D415DC187BCA0F00823DA9 /* sw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sw.png; path = ../../../Desktop/sw.png; sourceTree = "<group>"; };
 		65DA165E1872D10E0039CB78 /* CoolEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoolEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65DA16611872D10E0039CB78 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		65DA16631872D10E0039CB78 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -46,13 +72,19 @@
 		65DA16711872D10E0039CB78 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		65DA16741872D10E0039CB78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		65DA16761872D10E0039CB78 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		65DA16771872D10E0039CB78 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		65DA16791872D10E0039CB78 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		65DA167F1872D10E0039CB78 /* CoolEyeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoolEyeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		65DA16801872D10E0039CB78 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		65DA16881872D10E0039CB78 /* CoolEyeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CoolEyeTests-Info.plist"; sourceTree = "<group>"; };
 		65DA168A1872D10E0039CB78 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		65DA168C1872D10E0039CB78 /* CoolEyeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoolEyeTests.m; sourceTree = "<group>"; };
+		65DA16961872D1E10039CB78 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		65DA16981872D1F00039CB78 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		65DA169A1872D1F60039CB78 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		65DA169C1872D1FF0039CB78 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		65DA169E1872D2240039CB78 /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
+		65DA16A01872D22C0039CB78 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		65DA16A21872D2470039CB78 /* ViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +92,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65DA16A11872D22C0039CB78 /* AVFoundation.framework in Frameworks */,
+				65DA169F1872D2240039CB78 /* libstdc++.6.0.9.dylib in Frameworks */,
+				65DA169D1872D1FF0039CB78 /* QuartzCore.framework in Frameworks */,
+				65DA169B1872D1F60039CB78 /* CoreMedia.framework in Frameworks */,
+				65DA16991872D1F00039CB78 /* CoreImage.framework in Frameworks */,
 				65DA16641872D10E0039CB78 /* CoreGraphics.framework in Frameworks */,
+				65DA16971872D1E10039CB78 /* Accelerate.framework in Frameworks */,
 				65DA16661872D10E0039CB78 /* UIKit.framework in Frameworks */,
 				65DA16621872D10E0039CB78 /* Foundation.framework in Frameworks */,
+				C1A4B903CC284B47BF662F29 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +125,7 @@
 				65DA16861872D10E0039CB78 /* CoolEyeTests */,
 				65DA16601872D10E0039CB78 /* Frameworks */,
 				65DA165F1872D10E0039CB78 /* Products */,
+				36B9B43F8DB04A0D852FDC04 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,10 +141,17 @@
 		65DA16601872D10E0039CB78 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				65DA16A01872D22C0039CB78 /* AVFoundation.framework */,
+				65DA169E1872D2240039CB78 /* libstdc++.6.0.9.dylib */,
+				65DA169C1872D1FF0039CB78 /* QuartzCore.framework */,
+				65DA169A1872D1F60039CB78 /* CoreMedia.framework */,
+				65DA16981872D1F00039CB78 /* CoreImage.framework */,
+				65DA16961872D1E10039CB78 /* Accelerate.framework */,
 				65DA16611872D10E0039CB78 /* Foundation.framework */,
 				65DA16631872D10E0039CB78 /* CoreGraphics.framework */,
 				65DA16651872D10E0039CB78 /* UIKit.framework */,
 				65DA16801872D10E0039CB78 /* XCTest.framework */,
+				658F03FCD6C7418EB2F0E592 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -112,13 +159,22 @@
 		65DA16671872D10E0039CB78 /* CoolEye */ = {
 			isa = PBXGroup;
 			children = (
+				65D415DB187BCA0F00823DA9 /* jg.png */,
+				65D415DC187BCA0F00823DA9 /* sw.png */,
+				653477501875643500D131FB /* demo.jpg */,
+				6534774718754D5000D131FB /* white_nike.png */,
+				6534774B187553A200D131FB /* white_nike200.png */,
+				65347745187548A000D131FB /* test.png */,
+				6534774918754ECB00D131FB /* black_nike.png */,
 				65DA16701872D10E0039CB78 /* AppDelegate.h */,
 				65DA16711872D10E0039CB78 /* AppDelegate.m */,
 				65DA16731872D10E0039CB78 /* Main.storyboard */,
 				65DA16761872D10E0039CB78 /* ViewController.h */,
-				65DA16771872D10E0039CB78 /* ViewController.m */,
+				65DA16A21872D2470039CB78 /* ViewController.mm */,
 				65DA16791872D10E0039CB78 /* Images.xcassets */,
 				65DA16681872D10E0039CB78 /* Supporting Files */,
+				65347752187568F300D131FB /* DemoViewController.h */,
+				65347753187568F300D131FB /* DemoViewController.m */,
 			);
 			path = CoolEye;
 			sourceTree = "<group>";
@@ -159,9 +215,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 65DA16901872D10E0039CB78 /* Build configuration list for PBXNativeTarget "CoolEye" */;
 			buildPhases = (
+				C5E16B2FE50046C68B17E880 /* Check Pods Manifest.lock */,
 				65DA165A1872D10E0039CB78 /* Sources */,
 				65DA165B1872D10E0039CB78 /* Frameworks */,
 				65DA165C1872D10E0039CB78 /* Resources */,
+				A3569F85E0AA49069232AD12 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -228,9 +286,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				653477511875643500D131FB /* demo.jpg in Resources */,
 				65DA167A1872D10E0039CB78 /* Images.xcassets in Resources */,
+				6534774C187553A200D131FB /* white_nike200.png in Resources */,
+				65D415DE187BCA0F00823DA9 /* sw.png in Resources */,
+				6534774818754D5000D131FB /* white_nike.png in Resources */,
+				6534774A18754ECB00D131FB /* black_nike.png in Resources */,
+				65D415DD187BCA0F00823DA9 /* jg.png in Resources */,
 				65DA166C1872D10E0039CB78 /* InfoPlist.strings in Resources */,
 				65DA16751872D10E0039CB78 /* Main.storyboard in Resources */,
+				65347746187548A000D131FB /* test.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,14 +309,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A3569F85E0AA49069232AD12 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5E16B2FE50046C68B17E880 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		65DA165A1872D10E0039CB78 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65DA16781872D10E0039CB78 /* ViewController.m in Sources */,
+				65DA16A31872D2470039CB78 /* ViewController.mm in Sources */,
 				65DA16721872D10E0039CB78 /* AppDelegate.m in Sources */,
 				65DA166E1872D10E0039CB78 /* main.m in Sources */,
+				65347754187568F300D131FB /* DemoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,7 +474,9 @@
 		};
 		65DA16911872D10E0039CB78 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36B9B43F8DB04A0D852FDC04 /* Pods.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -388,7 +489,9 @@
 		};
 		65DA16921872D10E0039CB78 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36B9B43F8DB04A0D852FDC04 /* Pods.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -460,6 +563,7 @@
 				65DA16921872D10E0039CB78 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		65DA16931872D10E0039CB78 /* Build configuration list for PBXNativeTarget "CoolEyeTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +572,7 @@
 				65DA16951872D10E0039CB78 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
