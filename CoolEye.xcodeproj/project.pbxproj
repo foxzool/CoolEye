@@ -15,6 +15,14 @@
 		65347754187568F300D131FB /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65347753187568F300D131FB /* DemoViewController.m */; };
 		65D415DD187BCA0F00823DA9 /* jg.png in Resources */ = {isa = PBXBuildFile; fileRef = 65D415DB187BCA0F00823DA9 /* jg.png */; };
 		65D415DE187BCA0F00823DA9 /* sw.png in Resources */ = {isa = PBXBuildFile; fileRef = 65D415DC187BCA0F00823DA9 /* sw.png */; };
+		65D415E0187BF71E00823DA9 /* starbucks.png in Resources */ = {isa = PBXBuildFile; fileRef = 65D415DF187BF71E00823DA9 /* starbucks.png */; };
+		65D415E8187BFC2B00823DA9 /* twitter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 65D415E7187BFC2B00823DA9 /* twitter.jpg */; };
+		65D415EA187BFD1C00823DA9 /* batman.png in Resources */ = {isa = PBXBuildFile; fileRef = 65D415E9187BFD1C00823DA9 /* batman.png */; };
+		65D415EC187BFF8600823DA9 /* onepeace.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 65D415EB187BFF8600823DA9 /* onepeace.jpg */; };
+		65D415EE187C043300823DA9 /* BMW.png in Resources */ = {isa = PBXBuildFile; fileRef = 65D415ED187C043300823DA9 /* BMW.png */; };
+		65D415F0187C065000823DA9 /* android.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 65D415EF187C065000823DA9 /* android.jpg */; };
+		65D415F4187C156B00823DA9 /* android.png in Resources */ = {isa = PBXBuildFile; fileRef = 65D415F3187C156B00823DA9 /* android.png */; };
+		65D415F6187C163100823DA9 /* demo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 65D415F5187C163100823DA9 /* demo2.png */; };
 		65DA16621872D10E0039CB78 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65DA16611872D10E0039CB78 /* Foundation.framework */; };
 		65DA16641872D10E0039CB78 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65DA16631872D10E0039CB78 /* CoreGraphics.framework */; };
 		65DA16661872D10E0039CB78 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65DA16651872D10E0039CB78 /* UIKit.framework */; };
@@ -60,6 +68,14 @@
 		658F03FCD6C7418EB2F0E592 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		65D415DB187BCA0F00823DA9 /* jg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = jg.png; path = ../../../Desktop/jg.png; sourceTree = "<group>"; };
 		65D415DC187BCA0F00823DA9 /* sw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sw.png; path = ../../../Desktop/sw.png; sourceTree = "<group>"; };
+		65D415DF187BF71E00823DA9 /* starbucks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = starbucks.png; path = ../../../Downloads/starbucks.png; sourceTree = "<group>"; };
+		65D415E7187BFC2B00823DA9 /* twitter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = twitter.jpg; path = ../../../Desktop/twitter.jpg; sourceTree = "<group>"; };
+		65D415E9187BFD1C00823DA9 /* batman.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = batman.png; path = ../../../Downloads/batman.png; sourceTree = "<group>"; };
+		65D415EB187BFF8600823DA9 /* onepeace.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = onepeace.jpg; path = ../../../Downloads/onepeace.jpg; sourceTree = "<group>"; };
+		65D415ED187C043300823DA9 /* BMW.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BMW.png; path = ../../../Downloads/BMW.png; sourceTree = "<group>"; };
+		65D415EF187C065000823DA9 /* android.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = android.jpg; path = ../../../Downloads/android.jpg; sourceTree = "<group>"; };
+		65D415F3187C156B00823DA9 /* android.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = android.png; path = ../../../Desktop/android.png; sourceTree = "<group>"; };
+		65D415F5187C163100823DA9 /* demo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = demo2.png; path = ../../../Desktop/demo2.png; sourceTree = "<group>"; };
 		65DA165E1872D10E0039CB78 /* CoolEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoolEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65DA16611872D10E0039CB78 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		65DA16631872D10E0039CB78 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -159,6 +175,14 @@
 		65DA16671872D10E0039CB78 /* CoolEye */ = {
 			isa = PBXGroup;
 			children = (
+				65D415F5187C163100823DA9 /* demo2.png */,
+				65D415F3187C156B00823DA9 /* android.png */,
+				65D415EF187C065000823DA9 /* android.jpg */,
+				65D415ED187C043300823DA9 /* BMW.png */,
+				65D415EB187BFF8600823DA9 /* onepeace.jpg */,
+				65D415E9187BFD1C00823DA9 /* batman.png */,
+				65D415E7187BFC2B00823DA9 /* twitter.jpg */,
+				65D415DF187BF71E00823DA9 /* starbucks.png */,
 				65D415DB187BCA0F00823DA9 /* jg.png */,
 				65D415DC187BCA0F00823DA9 /* sw.png */,
 				653477501875643500D131FB /* demo.jpg */,
@@ -286,15 +310,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65D415F4187C156B00823DA9 /* android.png in Resources */,
 				653477511875643500D131FB /* demo.jpg in Resources */,
 				65DA167A1872D10E0039CB78 /* Images.xcassets in Resources */,
 				6534774C187553A200D131FB /* white_nike200.png in Resources */,
+				65D415F6187C163100823DA9 /* demo2.png in Resources */,
+				65D415EE187C043300823DA9 /* BMW.png in Resources */,
 				65D415DE187BCA0F00823DA9 /* sw.png in Resources */,
 				6534774818754D5000D131FB /* white_nike.png in Resources */,
+				65D415EA187BFD1C00823DA9 /* batman.png in Resources */,
 				6534774A18754ECB00D131FB /* black_nike.png in Resources */,
 				65D415DD187BCA0F00823DA9 /* jg.png in Resources */,
+				65D415E0187BF71E00823DA9 /* starbucks.png in Resources */,
 				65DA166C1872D10E0039CB78 /* InfoPlist.strings in Resources */,
+				65D415F0187C065000823DA9 /* android.jpg in Resources */,
+				65D415E8187BFC2B00823DA9 /* twitter.jpg in Resources */,
 				65DA16751872D10E0039CB78 /* Main.storyboard in Resources */,
+				65D415EC187BFF8600823DA9 /* onepeace.jpg in Resources */,
 				65347746187548A000D131FB /* test.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,6 +514,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CoolEye/CoolEye-Prefix.pch";
 				INFOPLIST_FILE = "CoolEye/CoolEye-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -497,6 +530,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CoolEye/CoolEye-Prefix.pch";
 				INFOPLIST_FILE = "CoolEye/CoolEye-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

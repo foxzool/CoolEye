@@ -22,6 +22,11 @@ using namespace cv;
 @interface ViewController : UIViewController <UIAlertViewDelegate, CvVideoCameraDelegate, CvPhotoCameraDelegate>
 
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) IBOutlet UIImageView *hist1View;
+@property (strong, nonatomic) IBOutlet UIImageView *hist2View;
+@property (strong, nonatomic) IBOutlet UIImageView *hist3View;
+@property (strong, nonatomic) IBOutlet UIImageView *preView;
+
 - (IBAction)actionStart:(id)sender;
 - (IBAction)takePic:(id)sender;
 

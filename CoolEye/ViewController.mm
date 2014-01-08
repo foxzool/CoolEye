@@ -141,18 +141,32 @@
   Mat hsv_half_down;
   
   
+  Mat src, dst;
+  src = image;
   
+
   
   
   IplImage ipl_img = image;
   Mat src_test1;
-  cvSetImageROI(&ipl_img, cv::Rect(100, 40, 400, 400));
+  cvSetImageROI(&ipl_img, cv::Rect(40, 40, 400, 400));
   
- rectangle(image, cv::Point(100, 40),cv::Point(400, 400),Scalar(255,0,0));
+  rectangle(image, cv::Point(40, 40),cv::Point(440, 440),Scalar(0,0,0));
   
   src_base = &ipl_img;
   src_test1 = [self cvMatFromUIImage:[UIImage imageNamed:@"black_nike.png"]];
-  src_test2 = [self cvMatFromUIImage:[UIImage imageNamed:@"tmall.png"]];
+  src_test2 = [self cvMatFromUIImage:[UIImage imageNamed:@"twitter.jpg"]];
+  
+  
+  /// 分割成3个单通道图像 ( R, G 和 B )
+  vector<Mat> rgb_planes;
+  split( src, rgb_planes );
+  
+  vector<Mat> rgb_planes1;
+  split( src_test1, rgb_planes1 );
+  
+  vector<Mat> rgb_planes2;
+  split( src_test2, rgb_planes2 );
   
   cvtColor(src_base, src_base, CV_RGB2BGR);
   cvtColor(src_test1, src_test1, CV_RGB2BGR);
@@ -228,7 +242,7 @@
       self.hfcount = 0;
     }
       
-      if (base_test2 > 0.3) {
+      if (base_test2 > 0.2) {
         self.hfcount2 += 1;
       } else {
         self.hfcount2 = 0;
@@ -236,7 +250,7 @@
     
       
       dispatch_async(dispatch_get_main_queue(), ^{
-        NSString *str = [[NSString alloc] initWithFormat:@"识别中.... %d", self.hfcount ];
+        NSString *str = [[NSString alloc] initWithFormat:@"识别中.... %d, %d", self.hfcount, self.hfcount2];
         [self.lblText setText:str];
       });
       
@@ -256,34 +270,63 @@
 //      image = [self cvMatFromUIImage:[UIImage imageNamed:@"demo.jpg"]];
 //      [self.videoCamera stop];
       self.isIT = true;
-      image = [self cvMatFromUIImage:[UIImage imageNamed:@"demo.jpg"]];
       
-      cvtColor(image, image, CV_RGB2BGR);
+      CvSize sz;
+      double scale = 0.25;
+      IplImage src = src_base;
+      sz.width = src.width*scale;
+      sz.height = src.height*scale;
+      
+      IplImage desc = *cvCreateImage(sz,src.depth,src.nChannels);
+      cvResize(&src,&desc,CV_INTER_CUBIC);
+      
+      Mat demo = [self cvMatFromUIImage:[UIImage imageNamed:@"demo.jpg"]];
+      cvtColor(demo, demo, CV_RGB2BGR);
+      cv::Rect roi(cv::Point(140, 240), cv::Size(100, 100));
+      Mat destROI = demo(roi);
+      Mat src2 = &desc;
+      src2.copyTo(destROI);
+      image = demo;
+      
       
     }
       
       
-//      if (self.hfcount2 >= 30 * 1) {
-//        
-//        //      [self.imageView setImage:[self UIImageFromCVMat:image]];
-//        
-//        
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//          [self.lblText setText:@"这是YOUTUBE"];
-//          
-//          UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"识别结果" message:@"nike" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-//          
-//          [alert show];
-//          
-//        });
-//        //      image = [self cvMatFromUIImage:[UIImage imageNamed:@"demo.jpg"]];
-//        //      [self.videoCamera stop];
-//        self.isIT = true;
-//        image = [self cvMatFromUIImage:[UIImage imageNamed:@"demo.jpg"]];
-//        
-//        cvtColor(image, image, CV_RGB2BGR);
-//        
-//      }
+      if (self.hfcount2 >= 30 * 1) {
+        
+        //      [self.imageView setImage:[self UIImageFromCVMat:image]];
+        
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+          [self.lblText setText:@"这是TWITTER"];
+          
+          UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"识别结果" message:@"twitter" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+          
+          [alert show];
+          
+        });
+        //      image = [self cvMatFromUIImage:[UIImage imageNamed:@"demo.jpg"]];
+        //      [self.videoCamera stop];
+        self.isIT = true;
+        CvSize sz;
+        double scale = 0.25;
+        IplImage src = src_base;
+        sz.width = src.width*scale;
+        sz.height = src.height*scale;
+        
+        IplImage desc = *cvCreateImage(sz,src.depth,src.nChannels);
+        cvResize(&src,&desc,CV_INTER_CUBIC);
+        
+        Mat demo = [self cvMatFromUIImage:[UIImage imageNamed:@"demo2.png"]];
+        cvtColor(demo, demo, CV_RGB2BGR);
+        cv::Rect roi(cv::Point(140, 240), cv::Size(100, 100));
+        Mat destROI = demo(roi);
+        Mat src2 = &desc;
+        src2.copyTo(destROI);
+        image = demo;
+        
+      }
+      
       
     }
     
@@ -291,15 +334,103 @@
 //  [self.imageView setImage:[UIImage imageNamed:@"demo.jpg"]];
   printf("count %d, %d\n " , self.hfcount, self.hfcount2);
   printf( "Done \n" );
+
   
   
-  
-  
-  
-  
-  
-  
-  
+//  /// 设定bin数目
+//  int histSize2 = 255;
+//  
+//  /// 设定取值范围 ( R,G,B) )
+//  float range[] = { 0, 255 } ;
+//  const float* histRange = { range };
+//  
+//  bool uniform = true; bool accumulate = false;
+//  
+//  Mat r_hist, g_hist, b_hist;
+//  Mat r_hist1, g_hist1, b_hist1;
+//  Mat r_hist2, g_hist2, b_hist2;
+//  
+//  /// 计算直方图:
+//  calcHist( &rgb_planes[0], 1, 0, Mat(), r_hist, 1, &histSize2, &histRange, uniform, accumulate );
+//  calcHist( &rgb_planes[1], 1, 0, Mat(), g_hist, 1, &histSize2, &histRange, uniform, accumulate );
+//  calcHist( &rgb_planes[2], 1, 0, Mat(), b_hist, 1, &histSize2, &histRange, uniform, accumulate );
+//  
+//  calcHist( &rgb_planes1[0], 1, 0, Mat(), r_hist1, 1, &histSize2, &histRange, uniform, accumulate );
+//  calcHist( &rgb_planes1[1], 1, 0, Mat(), g_hist1, 1, &histSize2, &histRange, uniform, accumulate );
+//  calcHist( &rgb_planes1[2], 1, 0, Mat(), b_hist1, 1, &histSize2, &histRange, uniform, accumulate );
+//
+//  calcHist( &rgb_planes2[0], 1, 0, Mat(), r_hist2, 1, &histSize2, &histRange, uniform, accumulate );
+//  calcHist( &rgb_planes2[1], 1, 0, Mat(), g_hist2, 1, &histSize2, &histRange, uniform, accumulate );
+//  calcHist( &rgb_planes2[2], 1, 0, Mat(), b_hist2, 1, &histSize2, &histRange, uniform, accumulate );
+//
+//  
+//  // 创建直方图画布
+//  int hist_w = 400; int hist_h = 400;
+//  int bin_w = cvRound( (double) hist_w/histSize2 );
+//  
+//  Mat histImage( hist_w, hist_h, CV_8UC3, Scalar( 0,0,0) );
+//  
+//  Mat histImage1( hist_w, hist_h, CV_8UC3, Scalar( 0,0,0) );
+//  
+//  Mat histImage2( hist_w, hist_h, CV_8UC3, Scalar( 0,0,0) );
+//  
+//  /// 将直方图归一化到范围 [ 0, histImage.rows ]
+//  normalize(r_hist, r_hist, 0, histImage.rows, NORM_MINMAX, -1, Mat() );
+//  normalize(g_hist, g_hist, 0, histImage.rows, NORM_MINMAX, -1, Mat() );
+//  normalize(b_hist, b_hist, 0, histImage.rows, NORM_MINMAX, -1, Mat() );
+//  
+//  normalize(r_hist1, r_hist1, 0, histImage1.rows, NORM_MINMAX, -1, Mat() );
+//  normalize(g_hist1, g_hist1, 0, histImage1.rows, NORM_MINMAX, -1, Mat() );
+//  normalize(b_hist1, b_hist1, 0, histImage1.rows, NORM_MINMAX, -1, Mat() );
+//  
+//  normalize(r_hist2, r_hist2, 0, histImage2.rows, NORM_MINMAX, -1, Mat() );
+//  normalize(g_hist2, g_hist2, 0, histImage2.rows, NORM_MINMAX, -1, Mat() );
+//  normalize(b_hist2, b_hist2, 0, histImage2.rows, NORM_MINMAX, -1, Mat() );
+//  
+//  /// 在直方图画布上画出直方图
+//  for( int i = 1; i < histSize2; i++ )
+//  {
+//    line( histImage, cv::Point( bin_w*(i-1), hist_h - cvRound(r_hist.at<float>(i-1)) ) ,
+//         cv::Point( bin_w*(i), hist_h - cvRound(r_hist.at<float>(i)) ),
+//         Scalar( 0, 0, 255), 2, 8, 0  );
+//    line( histImage, cv::Point( bin_w*(i-1), hist_h - cvRound(g_hist.at<float>(i-1)) ) ,
+//         cv::Point( bin_w*(i), hist_h - cvRound(g_hist.at<float>(i)) ),
+//         Scalar( 0, 255, 0), 2, 8, 0  );
+//    line( histImage, cv::Point( bin_w*(i-1), hist_h - cvRound(b_hist.at<float>(i-1)) ) ,
+//         cv::Point( bin_w*(i), hist_h - cvRound(b_hist.at<float>(i)) ),
+//         Scalar( 255, 0, 0), 2, 8, 0  );
+//    
+//    line( histImage1, cv::Point( bin_w*(i-1), hist_h - cvRound(r_hist1.at<float>(i-1)) ) ,
+//         cv::Point( bin_w*(i), hist_h - cvRound(r_hist1.at<float>(i)) ),
+//         Scalar( 0, 0, 255), 2, 8, 0  );
+//    line( histImage1, cv::Point( bin_w*(i-1), hist_h - cvRound(g_hist1.at<float>(i-1)) ) ,
+//         cv::Point( bin_w*(i), hist_h - cvRound(g_hist1.at<float>(i)) ),
+//         Scalar( 0, 255, 0), 2, 8, 0  );
+//    line( histImage1, cv::Point( bin_w*(i-1), hist_h - cvRound(b_hist1.at<float>(i-1)) ) ,
+//         cv::Point( bin_w*(i), hist_h - cvRound(b_hist1.at<float>(i)) ),
+//         Scalar( 255, 0, 0), 2, 8, 0  );
+//    
+//    line( histImage2, cv::Point( bin_w*(i-1), hist_h - cvRound(r_hist2.at<float>(i-1)) ) ,
+//         cv::Point( bin_w*(i), hist_h - cvRound(r_hist2.at<float>(i)) ),
+//         Scalar( 0, 0, 255), 2, 8, 0  );
+//    line( histImage2, cv::Point( bin_w*(i-1), hist_h - cvRound(g_hist2.at<float>(i-1)) ) ,
+//         cv::Point( bin_w*(i), hist_h - cvRound(g_hist2.at<float>(i)) ),
+//         Scalar( 0, 255, 0), 2, 8, 0  );
+//    line( histImage2, cv::Point( bin_w*(i-1), hist_h - cvRound(b_hist2.at<float>(i-1)) ) ,
+//         cv::Point( bin_w*(i), hist_h - cvRound(b_hist2.at<float>(i)) ),
+//         Scalar( 255, 0, 0), 2, 8, 0  );
+//  }
+//  
+//  
+//  
+//  
+//  
+//  dispatch_async(dispatch_get_main_queue(), ^{
+//    [self.hist1View setImage:[self UIImageFromCVMat:histImage]];
+//        [self.hist2View setImage:[self UIImageFromCVMat:histImage1]];
+//        [self.hist3View setImage:[self UIImageFromCVMat:histImage2]];
+//  });
+//  
   
   
 }
