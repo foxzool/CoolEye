@@ -127,10 +127,7 @@
  */
 - (void)processImage:(Mat&)image {
   
-  if (self.isIT) {
-    [self.videoCamera stop];
-    return;
-  }
+
   
   
   
@@ -156,6 +153,48 @@
   src_base = &ipl_img;
   src_test1 = [self cvMatFromUIImage:[UIImage imageNamed:@"black_nike.png"]];
   src_test2 = [self cvMatFromUIImage:[UIImage imageNamed:@"twitter.jpg"]];
+  
+  
+  if (self.isIT) {
+    //    [self.videoCamera stop];
+    
+    
+    IplImage ipl_img2 = src;
+
+    cvSetImageROI(&ipl_img2, cv::Rect(180, 180, 128, 78));
+    
+    Mat shot = &ipl_img2;
+    CvSize sz;
+    double scale = 1;
+    IplImage src = shot;
+    sz.width = src.width*scale;
+    sz.height = src.height*scale;
+    
+    IplImage desc = *cvCreateImage(sz,src.depth,src.nChannels);
+    cvResize(&src,&desc,CV_INTER_CUBIC);
+    
+    Mat demo;
+    if (self.itemType == 1) {
+      demo = [self cvMatFromUIImage:[UIImage imageNamed:@"demo.jpg"]];
+    } else {
+      demo = [self cvMatFromUIImage:[UIImage imageNamed:@"demo2.jpg"]];
+    }
+    
+    cvtColor(demo, demo, CV_RGB2BGR);
+    cv::Rect roi(cv::Point(126, 260), cv::Size(128, 78));
+    Mat destROI = demo(roi);
+    Mat src2 = &desc;
+    cvtColor(src2, src2, CV_RGB2BGR);
+    src2.copyTo(destROI);
+    
+    image = demo;
+//[self.videoCamera stop];
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//      [self.imageView setImage:[self UIImageFromCVMat:image]];
+//    });
+    NSLog(@"hhh");
+    return;
+  }
   
   
   /// 分割成3个单通道图像 ( R, G 和 B )
@@ -262,9 +301,9 @@
       dispatch_async(dispatch_get_main_queue(), ^{
         [self.lblText setText:@"这是NIKE"];
         
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"识别结果" message:@"nike" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        
-        [alert show];
+//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"识别结果" message:@"nike" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+//        
+//        [alert show];
         
       });
 //      image = [self cvMatFromUIImage:[UIImage imageNamed:@"demo.jpg"]];
@@ -287,7 +326,7 @@
       Mat src2 = &desc;
       src2.copyTo(destROI);
       image = demo;
-      
+      self.itemType = 1;
       
     }
       
@@ -300,9 +339,9 @@
         dispatch_async(dispatch_get_main_queue(), ^{
           [self.lblText setText:@"这是TWITTER"];
           
-          UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"识别结果" message:@"twitter" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-          
-          [alert show];
+//          UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"识别结果" message:@"twitter" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+//          
+//          [alert show];
           
         });
         //      image = [self cvMatFromUIImage:[UIImage imageNamed:@"demo.jpg"]];
@@ -317,14 +356,14 @@
         IplImage desc = *cvCreateImage(sz,src.depth,src.nChannels);
         cvResize(&src,&desc,CV_INTER_CUBIC);
         
-        Mat demo = [self cvMatFromUIImage:[UIImage imageNamed:@"demo2.png"]];
+        Mat demo = [self cvMatFromUIImage:[UIImage imageNamed:@"demo2.jpg"]];
         cvtColor(demo, demo, CV_RGB2BGR);
         cv::Rect roi(cv::Point(140, 240), cv::Size(100, 100));
         Mat destROI = demo(roi);
         Mat src2 = &desc;
         src2.copyTo(destROI);
         image = demo;
-        
+        self.itemType = 2;
       }
       
       

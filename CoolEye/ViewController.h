@@ -37,5 +37,6 @@ using namespace cv;
 @property int hfcount;
 @property int hfcount2;
 @property (strong, nonatomic) UIImage* demoJPG;
+@property int itemType;
 @property  BOOL isIT;
 @end
